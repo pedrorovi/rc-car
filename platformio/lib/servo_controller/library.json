@@ -1,5 +1,5 @@
 {
-    "name": "STEPPER_CONTROLLER",
+    "name": "SERVO_CONTROLLER",
     "version": "0.0.0",
     "build": {
         "libArchive": false,

@@ -57,12 +57,12 @@ static void mpptLoop(void* argument) {
     /* USER CODE END 5 */
 }
 
-static void stepperTask(void* argument) {
+static void servoTask(void* argument) {
     /* USER CODE BEGIN 5 */
     /* Infinite loop */
     for (;;) {
         if (osMutexAcquire(hardwareMutex, 100) == osOK) {
-            updateStepperLoop(system);
+            updateServoLoop(system);
             osMutexRelease(hardwareMutex);
         }
         osDelay(1);
@@ -100,7 +100,7 @@ void setupApp() {
     }
 
     mpptTask = osThreadNew(mpptLoop, NULL, &loopTask_attributes);
-    loopTask = osThreadNew(stepperTask, NULL, &loopTask_attributes);
+    loopTask = osThreadNew(servoTask, NULL, &loopTask_attributes);
 
     // // Create and start the timer
     // TimerHandle_t xTimer = xTimerCreate("MyTimer", pdMS_TO_TICKS(500), pdTRUE, 0, vTimerCallback);

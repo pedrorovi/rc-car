@@ -1,8 +1,8 @@
-#include "stepper_controller.h"
+#include "servo_controller.h"
 
 #include "stdio.h"
 
-bool StepperController::setup() {
+bool ServoController::setup() {
     const bool ok = pwm->start();
     if (!ok) {
         return false;
@@ -12,14 +12,14 @@ bool StepperController::setup() {
     return true;
 }
 
-void StepperController::setDirection(const uint32_t direction) {
+void ServoController::setDirection(const uint32_t direction) {
     pwm->updateDuty(direction);
 }
 
-uint32_t StepperController::getDirection() {
+uint32_t ServoController::getDirection() {
     return pwm->getDuty();
 }
 
-void StepperController::straight() {
+void ServoController::straight() {
     pwm->updateDuty(1500);
 }

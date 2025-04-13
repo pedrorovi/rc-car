@@ -8,7 +8,7 @@ This project is an embedded software application for controlling an RC solar-pow
 
 ## Features
 
-- **Motor Control**: Includes modules for controlling DC and stepper motors.
+- **Motor Control**: Includes modules for controlling DC and servo motors.
 - **Power Monitoring**: Uses the INA219 sensor to measure current and voltage.
 - **FreeRTOS Integration**: Real-time operating system for task scheduling.
 - **Debugging Utilities**: Provides logging and debugging support.

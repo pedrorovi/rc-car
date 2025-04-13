@@ -5,8 +5,8 @@ bool setupSystem(System* system) {
 
     system->getLedGreen()->setup();
     system->getLedRed()->setup();
-    if (!system->getStepper()->setup()) {
-        debug->error("Failed to setup stepper");
+    if (!system->getServo()->setup()) {
+        debug->error("Failed to setup servo");
         return false;
     }
     if (!system->getMotor()->setup()) {
@@ -17,8 +17,8 @@ bool setupSystem(System* system) {
         debug->error("Failed to start motor PPM input");
         return false;
     }
-    if (!system->getStepperPPMIn()->start()) {
-        debug->error("Failed to start stepper PPM input");
+    if (!system->getServoPPMIn()->start()) {
+        debug->error("Failed to start servo PPM input");
         return false;
     }
     // system->getWatchdog()->setup();
@@ -80,11 +80,11 @@ bool mpptLoop(System* system) {
     return true;
 }
 
-void updateStepperLoop(System* system) {
+void updateServoLoop(System* system) {
     Debug* debug = system->getDebug();
-    StepperInterface* stepper = system->getStepper();
-    PPMInInterface* stepperPPMIn = system->getStepperPPMIn();
-    const uint32_t stepperPulseWidth = stepperPPMIn->getPulseWidthUs();
-    // debug->trace("Stepper PPM pulse width: %u us", stepperPulseWidth);
-    stepper->setDirection(stepperPulseWidth);
+    ServoInterface* servo = system->getServo();
+    PPMInInterface* servoPPMIn = system->getServoPPMIn();
+    const uint32_t servoPulseWidth = servoPPMIn->getPulseWidthUs();
+    // debug->trace("servo PPM pulse width: %u us", servoPulseWidth);
+    servo->setDirection(servoPulseWidth);
 }

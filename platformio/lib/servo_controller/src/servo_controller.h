@@ -1,15 +1,15 @@
 #pragma once
 
-#include "stepper_interface.h"
+#include "servo_interface.h"
 
 #include "pwm_interface.h"
 
 #include <iostream>
 
-class StepperController : public StepperInterface {
+class ServoController : public ServoInterface {
    public:
-    StepperController(PWMInterface* pwm) : pwm(pwm) {}
-    ~StepperController() {}
+    ServoController(PWMInterface* pwm) : pwm(pwm) {}
+    ~ServoController() {}
 
     bool setup() override;
     void setDirection(const uint32_t direction) override;

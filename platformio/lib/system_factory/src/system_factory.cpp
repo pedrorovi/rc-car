@@ -6,7 +6,7 @@
 #include "motor_controller_factory.h"
 #include "mppt_controller.h"
 #include "ppm_in_factory.h"
-#include "stepper_controller_factory.h"
+#include "servo_controller_factory.h"
 #include "watchdog_controller.h"
 
 System* system = nullptr;
@@ -19,7 +19,7 @@ System* getSystem() {
         watchdog = new WatchdogController();
         mppt = new MPPT(20, 80, 1);
         system = new System(getLedRedFactory(), getLedGreenFactory(), getMotorInterfaceFactory(),
-                            getStepperInterfaceFactory(), getMotorPPMInInterface(), getStepperPPMInInterface(),
+                            getServoInterfaceFactory(), getMotorPPMInInterface(), getServoPPMInInterface(),
                             watchdog, getINA219Interface(), mppt, getDebugFactory());
     }
     return system;

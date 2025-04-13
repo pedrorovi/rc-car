@@ -1,9 +1,9 @@
 {
-    "name": "STEPPER_CONTROLLER_FACTORY",
+    "name": "SERVO_CONTROLLER_FACTORY",
     "version": "0.0.0",
     "build": {
         "libArchive": false,
         "includeDir": "src"
     },
-    "dependencies": ["STEPPER_CONTROLLER"]
+    "dependencies": ["SERVO_CONTROLLER"]
 }

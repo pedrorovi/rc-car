@@ -52,8 +52,8 @@ test_pwm:
 test_motor_controller_factory:
 	${PLATFORMIO} test -v --environment ${TEST_EMBEDDED_ENVIRONMENT} -f embedded/factories/test_motor_controller_factory
 
-test_stepper_controller_factory:
-	${PLATFORMIO} test -v --environment ${TEST_EMBEDDED_ENVIRONMENT} -f embedded/factories/test_stepper_controller_factory
+test_servo_controller_factory:
+	${PLATFORMIO} test -v --environment ${TEST_EMBEDDED_ENVIRONMENT} -f embedded/factories/test_servo_controller_factory
 
 test_gpio_controller_factories:
 	${PLATFORMIO} test -v --environment ${TEST_EMBEDDED_ENVIRONMENT} -f embedded/factories/test_gpio_controller_factories

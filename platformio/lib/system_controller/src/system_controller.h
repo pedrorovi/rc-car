@@ -4,4 +4,4 @@
 
 bool setupSystem(System* system);
 bool mpptLoop(System* system);
-void updateStepperLoop(System* system);
+void updateServoLoop(System* system);

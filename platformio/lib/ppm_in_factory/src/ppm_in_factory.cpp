@@ -5,7 +5,7 @@
 #include "stm32l4xx_hal.h"
 
 static PPMInInterface* motorPPMIn = nullptr;
-static PPMInInterface* stepperPPMIn = nullptr;
+static PPMInInterface* servoPPMIn = nullptr;
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef* htim) {
     switch (htim->Channel) {
@@ -14,8 +14,8 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef* htim) {
                 motorPPMIn->updatePulseWidth();
             break;
         case HAL_TIM_ACTIVE_CHANNEL_2:
-            if (stepperPPMIn != nullptr)
-                stepperPPMIn->updatePulseWidth();
+            if (servoPPMIn != nullptr)
+                servoPPMIn->updatePulseWidth();
             break;
         default:
             break;
@@ -29,9 +29,9 @@ PPMInInterface* getMotorPPMInInterface() {
     return motorPPMIn;
 }
 
-PPMInInterface* getStepperPPMInInterface() {
-    if (stepperPPMIn == nullptr) {
-        stepperPPMIn = new PPMIn(2);
+PPMInInterface* getServoPPMInInterface() {
+    if (servoPPMIn == nullptr) {
+        servoPPMIn = new PPMIn(2);
     }
-    return stepperPPMIn;
+    return servoPPMIn;
 }

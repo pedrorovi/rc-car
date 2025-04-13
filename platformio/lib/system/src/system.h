@@ -9,7 +9,7 @@
 #include "mppt_interface.h"
 #include "ppm_in_interface.h"
 #include "pwm_interface.h"
-#include "stepper_interface.h"
+#include "servo_interface.h"
 #include "watchdog_interface.h"
 
 class System {
@@ -17,9 +17,9 @@ class System {
     System(DigitalGpioInterface* led_red,
            DigitalGpioInterface* led_green,
            MotorInterface* motor,
-           StepperInterface* stepper,
+           ServoInterface* servo,
            PPMInInterface* motor_ppm_in,
-           PPMInInterface* stepper_ppm_in,
+           PPMInInterface* servo_ppm_in,
            WatchdogInterface* watchdog,
            INA219_interface* ina219,
            MpptInterface* mppt,
@@ -27,9 +27,9 @@ class System {
         : _led_red(led_red),
           _led_green(led_green),
           _motor(motor),
-          _stepper(stepper),
+          _servo(servo),
           _motor_ppm_in(motor_ppm_in),
-          _stepper_ppm_in(stepper_ppm_in),
+          _servo_ppm_in(servo_ppm_in),
           _watchdog(watchdog),
           _ina219(ina219),
           _mppt(mppt),
@@ -38,9 +38,9 @@ class System {
     DigitalGpioInterface* getLedRed() { return _led_red; }
     DigitalGpioInterface* getLedGreen() { return _led_green; }
     MotorInterface* getMotor() { return _motor; }
-    StepperInterface* getStepper() { return _stepper; }
+    ServoInterface* getServo() { return _servo; }
     PPMInInterface* getMotorPPMIn() { return _motor_ppm_in; }
-    PPMInInterface* getStepperPPMIn() { return _stepper_ppm_in; }
+    PPMInInterface* getServoPPMIn() { return _servo_ppm_in; }
     WatchdogInterface* getWatchdog() { return _watchdog; }
     INA219_interface* getINA219() { return _ina219; }
     MpptInterface* getMppt() { return _mppt; }
@@ -50,9 +50,9 @@ class System {
     DigitalGpioInterface* _led_red;
     DigitalGpioInterface* _led_green;
     MotorInterface* _motor;
-    StepperInterface* _stepper;
+    ServoInterface* _servo;
     PPMInInterface* _motor_ppm_in;
-    PPMInInterface* _stepper_ppm_in;
+    PPMInInterface* _servo_ppm_in;
     WatchdogInterface* _watchdog;
     INA219_interface* _ina219;
     MpptInterface* _mppt;
