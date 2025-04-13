@@ -25,15 +25,7 @@ This project is an embedded software application for controlling an RC solar-pow
 
 ### Building the Project
 
-1. Clone the repository:
-
-```bash
-   git clone <repository-url>
-   cd rc-car-stm32l432kc
-
-```
-
-Build the project using PlatformIO:
+1. Build the project using PlatformIO:
 
 ```bash
 make build_embedded
