@@ -1,0 +1,9 @@
+{
+    "name": "FreeRTOS",
+    "version": "0.0.0",
+    "build": {
+        "libArchive": true,
+        "includeDir": "src"
+    },
+    "dependencies": []
+}

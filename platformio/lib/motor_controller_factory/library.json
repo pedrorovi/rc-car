@@ -1,0 +1,9 @@
+{
+    "name": "MOTOR_CONTROLLER_FACTORY",
+    "version": "0.0.0",
+    "build": {
+        "libArchive": false,
+        "includeDir": "src"
+    },
+    "dependencies": ["MOTOR_CONTROLLER"]
+}

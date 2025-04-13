@@ -1,0 +1,12 @@
+{
+    "name": "MOTOR_CONTROLLER",
+    "version": "0.0.0",
+    "build": {
+        "libArchive": false,
+        "includeDir": "src"
+    },
+    "dependencies": [
+        "PWM_HAL",
+        "PID"
+    ]
+}

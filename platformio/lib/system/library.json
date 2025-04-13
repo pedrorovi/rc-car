@@ -1,0 +1,9 @@
+{
+    "name": "SYSTEM",
+    "version": "0.0.0",
+    "build": {
+        "libArchive": false,
+        "includeDir": "src"
+    },
+    "dependencies": []
+}
