@@ -60,7 +60,7 @@ This folder contains the firmware source code for the RC car, developed using Pl
 
 ### Car
 
-[Add a link to the car model or kit here](https://example.com)
+[AXSPEED-Kit](https://es.aliexpress.com/item/1005004083219971.html?spm=a2g0o.order_list.order_list_main.313.2c05194ddy0I9h&gatewayAdapt=glo2esp)
 
 ### Motor
 
@@ -73,3 +73,5 @@ This folder contains the firmware source code for the RC car, developed using Pl
 ### Batteries
 
 [Zeee 2S Lipo Batería 50C 2200mAh 7.4V Batería Corta con Enchufe XT60](https://amzn.eu/d/79buMsG)
+
+[Motor Battery](https://es.aliexpress.com/item/1005004770752418.html?spm=a2g0o.order_list.order_list_main.223.2c05194ddy0I9h&gatewayAdapt=glo2esp)
