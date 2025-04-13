@@ -1,6 +1,7 @@
 # RC Car Project
 
 ![RC Car](gallery/photo.jpg)
+![PCB](gallery/3d.png)
 
 This repository contains all the necessary files and resources to design, configure, and develop an RC car. The project is organized into three main folders:
 
