@@ -46,7 +46,7 @@ This folder contains the firmware source code for the RC car, developed using Pl
 3. **Firmware Development**: Use PlatformIO to write and upload firmware to the microcontroller. Navigate to the `platformio/` folder and run:
 
    ```sh
-   platformio run --target upload
+   make build_embedded
 
 ## Shopping list
 
